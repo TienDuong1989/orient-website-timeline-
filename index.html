@@ -192,6 +192,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="li"><div class="ld" style="background:var(--orange)"></div>Reviewing</div>
     <div class="li"><div class="ld" style="background:var(--purple)"></div>Deployment</div>
     <div class="li"><div class="ld" style="background:var(--cyan)"></div>Post-launch</div>
+    <div class="li"><div class="ld" style="background:var(--green)"></div>AI Pages</div>
   </div>
 </div>
 
@@ -297,44 +298,44 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="tc">Kickoff meeting, confirm scope, repo setup, UAT + Production environment</div>
       <div class="tc">Apr 1</div><div class="tc">Apr 3</div>
       <div class="tc"><span class="ow">Both</span></div>
-      <div class="tc"><span class="badge sa">In Progress</span></div>
+      <div class="tc"><span class="badge sd">✓ Done</span></div>
     </div>
 
     <div class="tr ph"><div class="tc" style="color:var(--orange)">▸ STEP 4 — Development (Frontend + Backend)</div></div>
     <div class="tr">
       <div class="tc tcn">4.1</div>
       <div class="tc">Phase 1 · Homepage build — 5 working days</div>
-      <div class="tc">Apr 1</div><div class="tc">Apr 7</div>
+      <div class="tc">Apr 1</div><div class="tc">Apr 13</div>
       <div class="tc"><span class="ow">Vendor</span></div>
-      <div class="tc"><span class="badge sp">Not Started</span></div>
+      <div class="tc"><span class="badge sd">✓ Done</span></div>
     </div>
     <div class="tr">
       <div class="tc tcn">4.2</div>
       <div class="tc">Phase 1 Review &amp; Approval — gate before Phase 2</div>
-      <div class="tc">Apr 7</div><div class="tc">Apr 9</div>
+      <div class="tc">Apr 13</div><div class="tc">Apr 14</div>
       <div class="tc"><span class="ow">Orient Software</span></div>
-      <div class="tc"><span class="badge sp">Not Started</span></div>
+      <div class="tc"><span class="badge sd">✓ Done</span></div>
     </div>
     <div class="tr">
       <div class="tc tcn">4.3</div>
       <div class="tc">CMS specification document delivery &amp; Orient approval</div>
-      <div class="tc">Apr 9</div><div class="tc">Apr 11</div>
+      <div class="tc">Apr 14</div><div class="tc">Apr 15</div>
       <div class="tc"><span class="ow">Both</span></div>
-      <div class="tc"><span class="badge sp">Not Started</span></div>
+      <div class="tc"><span class="badge sd">✓ Done</span></div>
     </div>
     <div class="tr">
       <div class="tc tcn">4.4</div>
       <div class="tc">Phase 2A · Component library + CMS foundation build</div>
-      <div class="tc">Apr 11</div><div class="tc">Apr 22</div>
+      <div class="tc">Apr 15</div><div class="tc">May 7</div>
       <div class="tc"><span class="ow">Vendor</span></div>
-      <div class="tc"><span class="badge sp">Not Started</span></div>
+      <div class="tc"><span class="badge sa">In Progress</span></div>
     </div>
     <div class="tr">
       <div class="tc tcn">4.5</div>
       <div class="tc">Phase 2B · 12 remaining pages assembly + CMS integration</div>
-      <div class="tc">Apr 22</div><div class="tc">May 5</div>
+      <div class="tc">Apr 22</div><div class="tc">May 10</div>
       <div class="tc"><span class="ow">Vendor</span></div>
-      <div class="tc"><span class="badge sp">Not Started</span></div>
+      <div class="tc"><span class="badge sa">In Progress</span></div>
     </div>
 
     <div class="tr ph"><div class="tc" style="color:var(--amber)">▸ STEP 5 — Internal Review &amp; QA</div></div>
@@ -372,6 +373,15 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="tc"><span class="ow">Both</span></div>
       <div class="tc"><span class="badge sp">Not Started</span></div>
     </div>
+
+    <div class="tr ph"><div class="tc" style="color:var(--green)">▸ STEP 9 — AI Native Spec Driven Pages Development</div></div>
+    <div class="tr">
+      <div class="tc tcn">9</div>
+      <div class="tc">Develop 3 additional pages for the AI Native Spec Driven section <span style="font-size:10px;color:var(--muted);font-style:italic">(details TBD)</span></div>
+      <div class="tc" style="color:var(--muted);font-style:italic">~May 29</div><div class="tc" style="color:var(--muted);font-style:italic">~Jun 5</div>
+      <div class="tc"><span class="ow" style="color:var(--muted)">Vendor</span></div>
+      <div class="tc"><span class="badge sp">Not Started</span></div>
+    </div>
   </div>
   <div class="last-updated">Last updated: <span id="lastUpdatedFull">—</span></div>
 </div>
@@ -384,7 +394,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 <script>
 // ── DATE HELPERS ──
 const GS = new Date('2026-03-16'); // Gantt start (Monday)
-const TW = 11; // total weeks shown
+const TW = 16; // total weeks shown
 const LW = 260; // label width px
 const BAR_MIN_W = 1.5; // min bar width %
 
@@ -410,13 +420,13 @@ const ROWS = [
   {n:'2.1',l:'Waiting for vendor proposal',             s:'2026-03-26',e:'2026-03-26',c:'bp', ow:'Vendor'},
   {n:'2.2',l:'Review proposals + contract sign-off',   s:'2026-03-26',e:'2026-04-01',c:'bp', ow:'Orient'},
   {l:'STEP 3 · Align with Vendor & Kickoff',            s:'2026-04-01',e:'2026-04-03',c:'bp',  ph:1},
-  {n:'3', l:'Kickoff + environment setup',              s:'2026-04-01',e:'2026-04-03',c:'bo', ow:'Both'},
-  {l:'STEP 4 · Development (Frontend + Backend)',       s:'2026-04-01',e:'2026-05-05',c:'bo',  ph:1},
-  {n:'4.1',l:'Phase 1 · Homepage (5 days)',             s:'2026-04-01',e:'2026-04-07',c:'bo', ow:'Vendor'},
-  {n:'4.2',l:'Phase 1 Review & Approval',               s:'2026-04-07',e:'2026-04-09',c:'br', ow:'Orient'},
-  {n:'4.3',l:'CMS spec delivery & approval',            s:'2026-04-09',e:'2026-04-11',c:'br', ow:'Both'},
-  {n:'4.4',l:'Phase 2A · Component lib + CMS',          s:'2026-04-11',e:'2026-04-22',c:'bo', ow:'Vendor'},
-  {n:'4.5',l:'Phase 2B · 12 pages + CMS',               s:'2026-04-22',e:'2026-05-05',c:'bo', ow:'Vendor'},
+  {n:'3', l:'Kickoff + environment setup',              s:'2026-04-01',e:'2026-04-03',c:'bp', ow:'Both'},
+  {l:'STEP 4 · Development (Frontend + Backend)',       s:'2026-04-01',e:'2026-05-10',c:'bo',  ph:1},
+  {n:'4.1',l:'Phase 1 · Homepage (5 days)',             s:'2026-04-01',e:'2026-04-13',c:'bp', ow:'Vendor'},
+  {n:'4.2',l:'Phase 1 Review & Approval',               s:'2026-04-13',e:'2026-04-14',c:'bp', ow:'Orient'},
+  {n:'4.3',l:'CMS spec delivery & approval',            s:'2026-04-14',e:'2026-04-15',c:'bp', ow:'Both'},
+  {n:'4.4',l:'Phase 2A · Component lib + CMS',          s:'2026-04-15',e:'2026-05-07',c:'bo', ow:'Vendor'},
+  {n:'4.5',l:'Phase 2B · 12 pages + CMS',               s:'2026-04-22',e:'2026-05-10',c:'bo', ow:'Vendor'},
   {l:'STEP 5 · Internal Review & QA',                   s:'2026-05-05',e:'2026-05-09',c:'br',  ph:1},
   {n:'5', l:'Review rounds + fix cycles',               s:'2026-05-05',e:'2026-05-09',c:'br', ow:'Both'},
   {l:'STEP 6 · UAT',                                    s:'2026-05-09',e:'2026-05-13',c:'br',  ph:1},
@@ -425,6 +435,8 @@ const ROWS = [
   {n:'7', l:'Production deploy + handover',             s:'2026-05-13',e:'2026-05-14',c:'bd', ow:'Vendor'},
   {l:'STEP 8 · Post-launch Monitoring',                 s:'2026-05-14',e:'2026-05-21',c:'bm',  ph:1},
   {n:'8', l:'7-day bug support + monitoring',           s:'2026-05-14',e:'2026-05-21',c:'bm', ow:'Both'},
+  {l:'STEP 9 · AI Native Spec Driven Pages',                   s:'2026-05-29',e:'2026-06-05',c:'bm',  ph:1},
+  {n:'9', l:'3 AI Native Spec Driven pages (est.)',          s:'2026-05-29',e:'2026-06-05',c:'bo', ow:'Vendor'},
 ];
 
 // Week labels
